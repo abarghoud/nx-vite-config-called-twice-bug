@@ -2,7 +2,10 @@
   "name": "@bug/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build-from-custon-target": "nx build-lib test",
+    "build": "nx build test"
+  },
   "private": true,
   "dependencies": {
     "react": "18.2.0",
