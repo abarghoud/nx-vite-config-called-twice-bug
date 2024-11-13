@@ -5,12 +5,19 @@ import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
-console.log('hello from vite.config.ts');
 export default defineConfig({
   root: __dirname,
   cacheDir: '../node_modules/.vite/test',
 
   plugins: [
+    {
+      name: 'my-plugin',
+      config: (config) => {
+        console.log('hello from vite.config.ts');
+
+        return config;
+      }
+    },
     react(),
     nxViteTsPaths(),
     dts({
